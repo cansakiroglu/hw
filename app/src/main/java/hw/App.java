@@ -11,6 +11,7 @@ import spark.ModelAndView;
 import spark.template.mustache.MustacheTemplateEngine;
 import static spark.Spark.get;
 import static spark.Spark.post;
+import static spark.Spark.port;
 
 public class App {
     public String getGreeting() {
@@ -18,6 +19,9 @@ public class App {
     }
 
     public static void main(String[] args) {
+        int port = Integer.parseInt(System.getenv("PORT"));
+        port(port);
+
         System.out.println(new App().getGreeting());
 
         get("/", (req, res) -> "Hello, World!!!");

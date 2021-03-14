@@ -1,1 +1,1 @@
-This is used for seeing if an integer array has the given all three integers in it.
+This app is used for checking if an array of integers has all the specified three integers in it.
